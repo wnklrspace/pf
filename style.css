@@ -1,0 +1,14 @@
+/*
+Theme URI: wnklr.art
+Author: Florian Winkler 
+Version: 1.0
+Author URI: https://wnklr.art
+*/
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-grey: #eee;
+  --color-darkgrey: #333;
+  --base: 2.7778vw;
+}

@@ -1,0 +1,109 @@
+.blogitem {
+    position: relative;
+
+    &__infos {
+        display: flex;
+
+
+        .inner {
+            display: flex;
+
+        }
+    }
+
+    &__finger {
+        position: absolute;
+        width: calc(var(--base) * 2);
+        transform: matrix(1, 0, 0, 1, -100, 20);
+        opacity: .2;
+    }
+
+    &__label {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition: ease-in .4s;
+        position: relative;
+
+        &::after {
+            //content: url(../../../../uploads/2020/06/pointing_finger.svg);
+            content: '';
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            transform: matrix(1, 0, 0, 1, -40, 20);
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: ease .2s;
+            pointer-events: none;
+        }
+
+        &:hover {
+            // transform: matrix(1, 0, 0, 1, 20, 0);
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}
+
+.memojicontainer {
+
+    display: flex;
+    justify-content: center;
+    //flex-direction: column;
+    position: relative;
+
+    .divider {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: .1rem;
+        outline: none;
+        border: none;
+    }
+
+    &__img {
+        margin-bottom: -.5rem;
+    }
+
+}
+
+.introduction {
+    position: relative;
+
+    .pb {
+        background-image: url(../../../../uploads/2020/07/pb.jpg);
+        background-position: center;
+        background-size: cover;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        z-index: -1;
+
+        opacity: 0;
+    }
+}
+
+.show-pb {
+    position: relative;
+    cursor: pointer;
+    border-bottom: .6rem solid var(--color-black);
+    // z-index: 150;
+}
+
+
+
+// .blogitem__label:hover::after {
+//     opacity: 1;
+// }
+
+.z-index {
+    z-index: 1000;
+}

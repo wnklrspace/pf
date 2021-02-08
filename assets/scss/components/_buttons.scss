@@ -1,0 +1,71 @@
+.btn {
+    display: inline-block;
+    padding: calc(var(--base) / 2) var(--base);
+    border-radius: 10rem; 
+    //background-color: var(--color-black);
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 5rem;
+    width: 5rem;
+    background-color: transparent;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10000;
+
+    &__inner {
+
+        border-radius: 50%;
+        height: 50%;
+        width: 50%;
+        border: .1rem solid var(--color-black);
+        background-color: transparent;
+        pointer-events: none;
+        transition: .1s ease-out;
+
+    }
+}
+
+.maximize {
+    height: 100%;
+    width: 100%;
+
+    &:before {
+        content: '';
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        background-color: var(--color-black);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+// .shrinkClick {
+//     animation: shrinkClick .3s ease;
+// }
+
+// @keyframes shrinkClick {
+//     0% {
+//         transform: scale(1);
+//     }
+
+//     50% {
+//         transform: scale(5);
+//     }
+
+//     100% {
+//         transform: scale(1);
+//     }
+// }
